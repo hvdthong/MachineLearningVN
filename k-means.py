@@ -72,7 +72,7 @@ X = np.concatenate((X0, X1, X2), axis=0)
 K = 3
 
 original_label = np.asarray([0] * N + [1] * N + [2] * N).T
-# kmeans_display(X, original_label)
+kmeans_display(X, original_label)
 
 (centers, labels, it) = kmeans(X, K)
 print 'Centers found by our algorithm:'
