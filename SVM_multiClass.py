@@ -82,6 +82,7 @@ l2, dW2 = svm_loss_vectorized(W, X, y, reg)
 t2 = time.time()
 print 'Vectorized: run time:', t2 - t1, '(s)'
 
+
 # print 'loss difference:', np.linalg.norm(l1 - l2)
 # print 'gradient difference:', np.linalg.norm(dW1 - dW2)
 
@@ -104,7 +105,6 @@ def multiclass_svm_GD(X, y, Winit, reg, lr=.1, batch_size=100, num_iters=1000, p
                   % (it, num_iters, loss_history[it])
 
     return W, loss_history
-
 
 # N, C, d = 49000, 10, 3073
 # reg = .1
