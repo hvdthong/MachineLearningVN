@@ -98,5 +98,7 @@ def evaluate(Yhat, rates, W, b):
         se += (e * e).sum(axis=0)
         cnt += e.size
     return sqrt(se / cnt)
+
+
 print 'RMSE for training:', evaluate(Yhat, rate_train, W, b)
 print 'RMSE for test    :', evaluate(Yhat, rate_test, W, b)
